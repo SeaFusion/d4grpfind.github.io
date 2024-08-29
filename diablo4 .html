@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo 4 Group Finder</title>
+    <style>
+        /* Style général */
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Cinzel', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #c0392b;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        th, td {
+            padding: 10px 10px;
+            border: 2px solid #444;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        td {
+            background-color: #333;
+            color: #d4af37;
+            font-size: 20px;
+        }
+
+        p1 {
+            font-size: 1.8rem;
+            color: #e74c3c;
+            text-shadow: 2px 2px 5px #000;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        p {
+			font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #2c3e50;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 3px 3px 10px #000;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        /* Ajouter une ambiance Diablo */
+        body:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.diablofans.com/media/attachments/25/494/Diablo-III-Reaper-of-Souls-wallpaper-11.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        /* Ajout d'animations */
+        a {
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Diablo IV Group Finder</h1>
+	<p align="center"><b>Write your battle tag</b> in "<b>Battle Tag field</b>" and click on the Boss you need to fight <u>to set rota number</u> :)</p>
+	<p align="center"><b><a href=https://discord.com/invite/diablo4>discord</a></b> to find people and <b>Rules</b> to display a message to other gamers with order and sell rules</p>
+	
+	<div align="center">
+        <label for="userId">Battle Tag: </label>
+        <input type="text" id="userId" value="Ayoli#2730" />
+    </div>
+    <div>
+        <br>
+		<table>
+            <tr>
+                <td>LFG party</td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Varshan')">Varshan</a></td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Beast')">Beast</a></td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Grigoire')">Grigoire</a></td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Zir')">Zir</a></td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Duriel')">Duriel</a></td>
+                <td><a href="#" onclick="copierTexte('LFG', 'Andariel')">Andariel</a></td>
+			</tr>
+			<tr>
+                <td>LFM party</td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Varshan')">Varshan</a></td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Beast')">Beast</a></td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Grigoire')">Grigoire</a></td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Zir')">Zir</a></td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Duriel')">Duriel</a></td>
+                <td><a href="#" onclick="copierTexte('LFM', 'Andariel')">Andariel</a></td>
+			 </tr>
+			 <tr>
+				<td>Items</td>
+                <td><img src="img/heart.png" alt="Heart" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+				<td><img src="img/fear.png" alt="Distilled fear" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+                <td><img src="img/steel.png" alt="alive steel" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+                <td><img src="img/blood.png" alt="blood" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+                <td><img src="img/egg.png" alt="egg" width="40" height="56"><img src="img/fragment.png" alt="fragment" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+                <td><img src="img/chain.png" alt="chain" width="40" height="56"><img src="img/doll.png" alt="doll" width="40" height="56"><img src="img/stygian.png" alt="Stygian Stone" width="40" height="56"></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div>
+        <br>
+        <table>
+            <tr>
+                <td>Rules Party</td>
+                <td><a href="#" onclick="copierTexteRulesParty()">Rules</a></td>
+            </tr>
+        </table>
+		<br>
+    </div>
+	<div>
+	<table>
+    <tr>
+		<td>Rota 1</td>
+        <td><a href="#" onclick="copyTextRun('1.1 next')">1.1</a></td>
+        <td><a href="#" onclick="copyTextRun('1.2 next')">1.2</a></td>
+        <td><a href="#" onclick="copyTextRun('1.3 next')">1.3</a></td>
+        <td><a href="#" onclick="copyTextRun('1.4 next')">1.4</a></td>
+    </tr>
+    <tr>
+		<td>Rota 2</td>
+        <td><a href="#" onclick="copyTextRun('2.1 next')">2.1</a></td>
+        <td><a href="#" onclick="copyTextRun('2.2 next')">2.2</a></td>
+        <td><a href="#" onclick="copyTextRun('2.3 next')">2.3</a></td>
+        <td><a href="#" onclick="copyTextRun('2.4 next')">2.4</a></td>
+    </tr>
+    <tr>
+		<td>Rota 3</td>
+        <td><a href="#" onclick="copyTextRun('3.1 next')">3.1</a></td>
+        <td><a href="#" onclick="copyTextRun('3.2 next')">3.2</a></td>
+        <td><a href="#" onclick="copyTextRun('3.3 next')">3.3</a></td>
+        <td><a href="#" onclick="copyTextRun('3.4 next')">3.4</a></td>
+    </tr>
+    <tr>
+		<td>Rota 4</td>
+        <td><a href="#" onclick="copyTextRun('4.1 next')">4.1</a></td>
+        <td><a href="#" onclick="copyTextRun('4.2 next')">4.2</a></td>
+        <td><a href="#" onclick="copyTextRun('4.3 next')">4.3</a></td>
+        <td><a href="#" onclick="copyTextRun('4.4 next')">4.4</a></td>
+    </tr>
+    <tr>
+		<td>Rota 5</td>
+        <td><a href="#" onclick="copyTextRun('5.1 next')">5.1</a></td>
+        <td><a href="#" onclick="copyTextRun('5.2 next')">5.2</a></td>
+        <td><a href="#" onclick="copyTextRun('5.3 next')">5.3</a></td>
+        <td><a href="#" onclick="copyTextRun('5.4 next')">5.4</a></td>
+    </tr>
+</table>
+</div>
+	
+	
+    <script>
+        function copierTexte(type, boss) {
+            // Récupérer la valeur du User ID depuis l'input
+            const userId = document.getElementById("userId").value;
+
+            const chiffre = prompt("How many invoc ? :");
+            if (chiffre !== null && chiffre !== "") {
+                let texte = `${type} Tormented ${boss} x${chiffre} ${userId}`;
+                const elementTemp = document.createElement("textarea");
+                elementTemp.value = texte;
+                document.body.appendChild(elementTemp);
+                elementTemp.select();
+                elementTemp.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                document.body.removeChild(elementTemp);
+                <!-- alert("Texte copié : " + texte);-->
+            } else {
+                alert("Aucun chiffre n'a été entré.");
+            }
+        }
+    </script>
+	<script>
+    function copierTexteRulesParty() {
+        // Demander à l'utilisateur un chiffre
+        const chiffre = prompt("Insert invoc order (example : A/B/C/D :");
+
+        // Vérifier si un chiffre a été entré
+        if (chiffre !== null && chiffre !== "") {
+            // Texte avec un emplacement pour le chiffre
+            let texte = "Hello! Aphabetic order: [CHIFFRE] Town each to sell, GL :)";
+
+            // Remplacer [CHIFFRE] par le chiffre saisi
+            texte = texte.replace("[CHIFFRE]", chiffre);
+            
+            // Créer un élément temporaire pour copier le texte
+            const elementTemp = document.createElement("textarea");
+            elementTemp.value = texte;
+            document.body.appendChild(elementTemp);
+            
+            // Sélectionner le texte
+            elementTemp.select();
+            elementTemp.setSelectionRange(0, 99999); // Pour les mobiles
+            
+            // Copier le texte
+            document.execCommand("copy");
+            
+            // Supprimer l'élément temporaire
+            document.body.removeChild(elementTemp);
+            
+            // Message de confirmation
+            <!-- alert("Texte copié : " + texte);-->
+        } else {
+            alert("Aucun chiffre n'a été entré.");
+        }
+    }
+</script>
+    <script>
+        function copyTextRun(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                <!-- alert("Texte copié: " + text);-->
+            }, function() {
+                alert("Échec de la copie du texte.");
+            });
+        }
+    </script>
+
+</body>
+</html>
