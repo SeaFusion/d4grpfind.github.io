@@ -231,41 +231,25 @@
             }
         }
     </script>
-	<script>
+<script>
     function copierTexteRulesParty() {
-        // Demander à l'utilisateur un chiffre (123)
-        const chiffre = prompt("Insert invoc order (example : A/B/C/D :");
+        const chiffre = prompt("Insert invoc order (example : A/B/C/D):");
 
-        // Vérifier si un chiffre a été entré
         if (chiffre !== null && chiffre !== "") {
-            // Texte avec un emplacement pour le chiffre
-            let texte = "Hello! Aphabetic order: [CHIFFRE] Town each to sell, GL :)";
+            let texte = `Hello! Alphabetic order: ${chiffre} Town each to sell, GL :)`;
 
-            // Remplacer [CHIFFRE] par le chiffre saisi
-            texte = texte.replace("[CHIFFRE]", chiffre);
-            
-            // Créer un élément temporaire pour copier le texte
-            const elementTemp = document.createElement("textarea");
-            elementTemp.value = texte;
-            document.body.appendChild(elementTemp);
-            
-            // Sélectionner le texte
-            elementTemp.select();
-            elementTemp.setSelectionRange(0, 99999); // Pour les mobiles
-            
-            // Copier le texte
-            document.execCommand("copy");
-            
-            // Supprimer l'élément temporaire
-            document.body.removeChild(elementTemp);
-            
-            // Message de confirmation
-            <!-- alert("Texte copié : " + texte);-->
+            // Utiliser l'API Clipboard pour copier le texte
+            navigator.clipboard.writeText(texte).then(function() {
+                console.log("Texte copié : " + texte);
+            }).catch(function(error) {
+                alert("Échec de la copie du texte : " + error);
+            });
         } else {
             alert("Aucun chiffre n'a été entré.");
         }
     }
 </script>
+
     <script>
         function copyTextRun(text) {
             navigator.clipboard.writeText(text).then(function() {
